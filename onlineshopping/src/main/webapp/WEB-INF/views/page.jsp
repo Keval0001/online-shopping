@@ -24,7 +24,8 @@
 <title>Online Shopping - ${title}</title>
 <!-- highlighting the active menu in navbar -->
 <script>
-	window.menu = '${title}'
+	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
 </script>
 
 <!-- Bootstrap Core CSS -->
@@ -33,6 +34,8 @@
 <!-- Bootstrap Readable theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
+<!-- Bootstrap dataTables theme -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -64,7 +67,7 @@
 			</c:if>
 
 			<!-- Load only when user clicks about -->
-			<c:if test="${userClickAbout == true}">
+			<c:if test="${userClickAbout == true}">   
 				<%@include file="./about.jsp"%>
 			</c:if>
 
@@ -90,7 +93,13 @@
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
-
+		
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTable bootstrap -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		<!-- Self coded JavaScript -->
 		<script src="${js}/myapp.js"></script>
 
