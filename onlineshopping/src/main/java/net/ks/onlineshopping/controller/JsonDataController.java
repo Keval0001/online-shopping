@@ -17,7 +17,7 @@ public class JsonDataController {
 
 	@Autowired
 	private ProductDAO productDAO;
-
+	//
 	@RequestMapping("/all/products")
 	@ResponseBody // return object in form of json , convert automatically
 	public List<Product> getAllProduct() {
