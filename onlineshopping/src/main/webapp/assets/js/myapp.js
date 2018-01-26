@@ -27,7 +27,7 @@ $(function() {
 	 *  ];
 	 */
 
-	var $table = $('#productListTable');
+	var $table = $('#productListTable'); //# is id selector
 
 	// execute the below code only when we have this table
 
