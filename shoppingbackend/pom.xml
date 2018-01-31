@@ -19,6 +19,20 @@
 
 	<dependencies>
 		<!-- SPRING -->
+		<!-- Excluding commons-logging dependency -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -51,6 +65,12 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>
 			<version>2.1.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<!-- JACKSON -->
@@ -60,7 +80,7 @@
 			<version>${jackson.version}</version>
 		</dependency>
 
-		<!-- JACKSON ANNOTATIONS-->
+		<!-- JACKSON ANNOTATIONS -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
@@ -75,7 +95,22 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Logging SLF4J -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.24</version>
+		</dependency>
 	</dependencies>
+
+
 
 	<build>
 		<plugins>
