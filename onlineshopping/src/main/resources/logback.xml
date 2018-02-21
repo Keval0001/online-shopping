@@ -16,7 +16,7 @@
 	<!-- By default level of root is DEBUG -->
 	<root level="INFO">
 		<appender-ref ref="consoleAppender" />
-
+		
 	</root>
 
 
